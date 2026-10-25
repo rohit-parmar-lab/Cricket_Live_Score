@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Match History</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f6f9;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+            }
+
+            .container {
+                background-color: #ffffff;
+                padding: 30px 40px;
+                border-radius: 10px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+                width: 400px;
+            }
+            h2 {
+                text-align: center;
+                color: blue;
+                margin-bottom: 25px;
+            }
+            label {
+                display: block;
+                margin: 10px 0 5px;
+                font-weight: bold;
+                color: #34495e;
+            }
+            input[type="text"],
+            input[type="number"],
+            input[type="date"] {
+                width: 100%;
+                padding: 8px 10px;
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+            input[type="submit"], .back-btn {
+                width: 48%;
+                padding: 10px 0;
+                margin-top: 10px;
+                border: none;
+                border-radius: 5px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+            input[type="submit"] {
+                background-color: #27ae60;
+                color: white;
+            }
+            input[type="submit"]:hover {
+                background-color: #1e8449;
+            }
+            .back-btn {
+                display: inline-block;
+                background-color: #2980b9;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+            }
+            .back-btn:hover {
+                background-color: #1f6690;
+            }
+            .buttons {
+                display: flex;
+                justify-content: space-between;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="container">
+            <h2>Add Match History</h2>
+            <form action="Add_Match_History" method="post">
+                <label>Team 1:</label>
+                <input type="text" name="team1" required>
+
+                <label>Team 2:</label>
+                <input type="text" name="team2" required>
+
+                <label>Winner Team:</label>
+                <input type="text" name="winner_team">
+
+                <label>Highest Score:</label>
+                <input type="number" name="highest_score">
+
+                <label>Highest Wicket:</label>
+                <input type="number" name="highest_wicket">
+
+                <label>Highest Score Player:</label>
+                <input type="text" name="highest_score_player">
+
+                <label>Highest Wicket Player:</label>
+                <input type="text" name="highest_wicket_player">
+
+                <label>Man of the Match:</label>
+                <input type="text" name="man_of_the_match">
+
+                <label>Match Date:</label>
+                <input type="date" name="matchDate" required>
+
+                <div class="buttons">
+                    <input type="submit" value="Submit"><br><br>
+                    
+                    <a href="Admin_Home" class="back-btn">Back</a>
+                </div>
+            </form>
+        </div>
+
+    </body>
+</html>

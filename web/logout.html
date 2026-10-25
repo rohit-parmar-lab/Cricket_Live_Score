@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Logout Button</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: Arial, sans-serif;
+            }
+             .header {
+                width: 100%;
+                padding: 10px 15px;
+                display: flex;
+                justify-content: flex-end; /* right align */
+                background-color: #f4f4f4;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            }
+            .logout-btn {
+                background-color: #f44336; /* red color */
+                color: white;
+                border: none;
+                padding: 8px 18px; /* reduced height */
+                font-size: 14px;
+                font-weight: bold;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: 0.3s;
+                box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+            }
+            .logout-btn:hover {
+                background-color: #d32f2f;
+                transform: translateY(-1px);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            }
+            .logout-btn:active {
+                transform: translateY(0);
+                box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="header">
+            <form action="Logout" method="post">
+                <input type="submit" class="logout-btn" value="Logout">
+            </form>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User Registration</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+            body {
+                margin: 0;
+                font-family: Arial, sans-serif;
+                background: linear-gradient(to right, #2196F3, #21CBF3);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+
+            .register-box {
+                width: 350px;
+                padding: 25px;
+                background: white;
+                border-radius: 8px;
+                box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            }
+
+            .register-box h2 {
+                text-align: center;
+                margin-bottom: 20px;
+                color: #333;
+            }
+
+            .register-box input {
+                width: 100%;
+                padding: 10px;
+                margin: 8px 0;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                font-size: 14px;
+            }
+
+            .register-box input:focus {
+                border-color: #2196F3;
+                outline: none;
+            }
+
+            .register-box input[type="submit"] {
+                background-color: #2196F3;
+                color: white;
+                border: none;
+                cursor: pointer;
+                font-weight: bold;
+            }
+
+            .register-box input[type="submit"]:hover {
+                background-color: #1976D2;
+            }
+
+            .error {
+                color: red;
+                font-size: 13px;
+            }
+
+            .login-link {
+                text-align: center;
+                margin-top: 10px;
+                font-size: 14px;
+            }
+
+            .login-link a {
+                text-decoration: none;
+                color: #2196F3;
+            }
+            .view-btn {
+            display: inline-block;
+            padding: 8px 18px;
+            margin-top: 15px;
+            background-color: #4CAF50;
+            color: white;           
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+            }
+            
+            .view-btn:hover {
+                background-color: #388E3C;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="register-box">
+            <h2>Create Account</h2>
+
+            <form action="Register" method="post" onsubmit="return valid()">
+                <input type="text" name="name" placeholder="Enter Name" required>
+                <input type="email" name="email" placeholder="Enter Email" required>
+                <input type="text" name="mob" placeholder="Enter Mobile" required>
+                <input type="password" id="pwd1" name="pwd" placeholder="Enter Password" required>
+                <input type="password" id="pwd2" placeholder="Confirm Password" required>
+
+                <span id="one" class="error"></span>
+
+                <input type="submit" value="Register">
+            </form>
+            <div style="text-align: center">
+            <!--<a href="Show_Register" class="view-btn">View Register</a>-->
+         </div>
+            </div>
+        <script src="JS/one.js"></script>
+
+    </body>
+</html>

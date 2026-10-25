@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>add feature match</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-family: 'Roboto', sans-serif;
+                background: linear-gradient(120deg,#2980b9,#6dd5fa);
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                height:100vh;
+            }
+            .container {
+                background:#fff;
+                padding:40px;
+                border-radius:15px;
+                box-shadow:0 15px 35px rgba(0,0,0,0.2);
+                text-align:center;
+                width:400px;
+            }
+            input[type="text"], input[type="date"] {
+                width:100%;
+                padding:12px;
+                margin:10px 0;
+                border:1px solid #ccc;
+                border-radius:8px;
+                font-size:14px;
+            }
+            input[type="text"]:focus, input[type="date"]:focus {
+                border-color:#2980b9;
+                outline:none;
+                box-shadow:0 0 5px #2980b9;
+            }
+            button {
+                width:100%;
+                padding:12px;
+                margin-top:15px;
+                background:linear-gradient(45deg,#2980b9,#6dd5fa);
+                border:none;
+                color:white;
+                font-weight:bold;
+                font-size:16px;
+                border-radius:8px;
+                cursor:pointer;
+            }
+            button:hover {
+                background:linear-gradient(45deg,#6dd5fa,#2980b9);
+            }
+            a{
+                display:block;
+                margin-top:20px;
+                text-decoration:none;
+                color:#2980b9;
+            }
+            .back-btn {
+                display: inline-block;
+                background-color: #2980b9;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+            }
+            .back-btn:hover {
+                background-color: #1f6690;
+            }
+            .buttons {
+                display: flex;
+                justify-content: space-between;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Add Feature Match</h2>
+            <form action="Add_Feature_Match" method="post">
+                <input type="text" name="team1" placeholder="Team 1 Name" required>
+                <input type="text" name="team2" placeholder="Team 2 Name" required>
+                <input type="date" name="matchDate" required>
+                <input type="time" name="matchTime" required>
+                <input type="text" name="venue" placeholder="Venue" required>
+                <button type="submit">Submit</button>
+            </form>
+            <!--<a href="Admin_Home">Back</a>-->
+             <a href="Admin_Home" class="back-btn">Back</a>
+        </div>
+    </body>
+</html>

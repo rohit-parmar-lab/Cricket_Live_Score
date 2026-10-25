@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>update_pwd</title>
+        <script>
+            function validate() {
+                var pwd = document.forms["resetForm"]["newPwd"].value;
+                var cpwd = document.forms["resetForm"]["confirmPwd"].value;
+                if (pwd != cpwd) {
+                    alert("Passwords do not match!");
+                    return false;
+                }
+                return true;
+            }
+
+            // Get token from URL and set hidden input
+            window.onload = function () {
+                const params = new URLSearchParams(window.location.search);
+                document.getElementById("token").value = params.get("token");
+            };
+        </script>
+    </head>
+    <body>
+        <h2>Reset Password</h2>
+        <form name="resetForm" action="Update" method="post" onsubmit="return validate();">
+            <input type="hidden" name="token" value="<!-- token from URL -->">
+            <input type="password" name="newPwd" placeholder="New Password" required><br><br>
+            <input type="password" name="confirmPwd" placeholder="Confirm Password" required><br><br>
+            <input type="submit" value="Update Password">
+        </form>
+    </body>
+</html>
